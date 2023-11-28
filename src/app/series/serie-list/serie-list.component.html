@@ -1,0 +1,28 @@
+<header style="background-color: rgb(14, 177, 177); margin-bottom: 30px;">
+  <h2>Series</h2>
+</header>
+
+<div class="container-fluid">
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Channel</th>
+        <th>Seasons</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of series">
+        <td>{{s.id}}</td>
+        <td>{{s.name}}</td>
+        <td>{{s.channel}}</td>
+        <td>{{s.seasons}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class = "col-md-6" *ngIf="selectedSerie" >
+  <app-serie-detail [serieDetail]="selectedSerie"></app-serie-detail>
+</div>
